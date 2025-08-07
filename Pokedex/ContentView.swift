@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Pokedex
-//
-//  Created by Antoine BODART on 28/07/2025.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 
@@ -20,33 +13,33 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView {
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 120))], spacing: 16) {
-                    
-                    let filteredPokemons = viewModel.pokemons.filter {
-                        searchText.isEmpty || $0.name.foldingForSearch.lowercased().contains(searchText.foldingForSearch.lowercased())
+            let filteredPokemons = viewModel.pokemons.filter {
+                searchText.isEmpty || $0.name.foldingForSearch.lowercased().contains(searchText.foldingForSearch.lowercased())
+            }
+
+            ZStack {
+                if filteredPokemons.isEmpty {
+                    VStack(spacing: 12) {
+                        Image(systemName: "magnifyingglass.circle")
+                            .font(.system(size: 48))
+                            .foregroundColor(.gray)
+                        
+                        Text("No Pokemon found :(")
+                            .font(.headline)
+                            .foregroundColor(.secondary)
                     }
-                    
-                    if filteredPokemons.isEmpty {
-                        VStack {
-                                Spacer()
-
-                                Text("No Pokémon found :(")
-                                    .font(.headline)
-                                    .foregroundColor(.secondary)
-
-                                Spacer()
-                            }
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .padding(.top, 40) } else {
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                } else {
+                    ScrollView {
+                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 120))], spacing: 16) {
                             ForEach(filteredPokemons) { pokemon in
-                                ZStack() {
+                                ZStack {
                                     RoundedRectangle(cornerRadius: 16)
                                         .fill(Color.white)
                                         .shadow(color: .gray.opacity(0.3), radius: 6, x: 0, y: 4)
                                     
                                     VStack(spacing: 8) {
-                                        WebImage(url: URL(string: pokemon.sprite), ) { image in
+                                        WebImage(url: URL(string: pokemon.sprite)) { image in
                                             image
                                                 .resizable()
                                                 .scaledToFit()
@@ -61,16 +54,18 @@ struct ContentView: View {
                                         
                                         Text("#\(pokemon.id)")
                                             .font(.subheadline)
-                                            .foregroundColor(Color.gray)
+                                            .foregroundColor(.gray)
                                     }
-                                    .padding(.vertical, 8.0)
+                                    .padding(.vertical, 8)
                                 }
                             }
                             .padding(.horizontal, 4)
                         }
+                        .padding(16)
+                    }
                 }
-                .padding(.all, 16)
             }
+            .navigationTitle("Pokedex")
             .searchable(text: $searchText, prompt: "Pikachu ...")
             .onAppear {
                 viewModel.fetchPokemon()
