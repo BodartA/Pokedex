@@ -1,4 +1,4 @@
-# 🧢 Pokédex
+# 🧢 Pokedex
 
 ![Swift](https://img.shields.io/badge/Swift-5.9-orange?logo=swift)
 ![SwiftUI](https://img.shields.io/badge/SwiftUI-%20-blue?logo=swift)
@@ -7,7 +7,7 @@
 
 ## 📌 Overview
 
-**Pokédex** is a **simple, responsive Pokémon browser built with SwiftUI**, designed to:
+**Pokedex** is a **simple, responsive Pokémon browser built with SwiftUI**, designed to:
 
 ✅ Practice `MVVM` architecture separation  
 ✅ Manipulate API calls with `URLSession` and JSON decoding  
@@ -58,7 +58,7 @@ Then this project offers a **concise and real-world use case to learn from**.
 
 ## 🖼️ Screenshots
 
-### 🏠 Pokédex Grid View
+### 🏠 Pokedex Grid View
 <img src="https://github.com/TON_PROFIL/PokedexApp/blob/main/Screenshots/PokedexGrid.png" width="300">
 
 ### 🔍 Search in Action
@@ -66,8 +66,6 @@ Then this project offers a **concise and real-world use case to learn from**.
 
 ### ❌ No Match Found
 <img src="https://github.com/TON_PROFIL/PokedexApp/blob/main/Screenshots/PokedexEmptyState.png" width="300">
-
-> *(Ajoute ces captures dans ton dossier `Screenshots/` et mets à jour les URLs ci-dessus)*
 
 ---
 
