@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AE7027A62E37F21B0032969E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = AE7027A42E37F2120032969E /* .gitignore */; };
+		AE7027C52E3E773C0032969E /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AE7027C42E3E773C0032969E /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE7027C52E3E773C0032969E /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +120,7 @@
 			);
 			name = Pokedex;
 			packageProductDependencies = (
+				AE7027C42E3E773C0032969E /* SDWebImageSwiftUI */,
 			);
 			productName = Pokedex;
 			productReference = AE7027662E37F1610032969E /* Pokedex.app */;
@@ -201,6 +204,9 @@
 			);
 			mainGroup = AE70275D2E37F1600032969E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				AE7027C32E3E76EE0032969E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = AE7027672E37F1610032969E /* Products */;
 			projectDirPath = "";
@@ -557,6 +563,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AE7027C32E3E76EE0032969E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AE7027C42E3E773C0032969E /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE7027C32E3E76EE0032969E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AE70275E2E37F1600032969E /* Project object */;
 }
