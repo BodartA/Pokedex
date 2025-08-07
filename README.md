@@ -59,13 +59,13 @@ Then this project offers a **concise and real-world use case to learn from**.
 ## 🖼️ Screenshots
 
 ### 🏠 Pokedex Grid View
-<img src="https://github.com/TON_PROFIL/PokedexApp/blob/main/Screenshots/PokedexGrid.png" width="300">
+<img src="https://github.com/BodartA/Pokedex/blob/main/Screenshots/Pokedex.png" width="300">
 
 ### 🔍 Search in Action
-<img src="https://github.com/TON_PROFIL/PokedexApp/blob/main/Screenshots/PokedexSearch.png" width="300">
+<img src="https://github.com/BodartA/Pokedex/blob/main/Screenshots/Search.png" width="300">
 
 ### ❌ No Match Found
-<img src="https://github.com/TON_PROFIL/PokedexApp/blob/main/Screenshots/PokedexEmptyState.png" width="300">
+<img src="https://github.com/BodartA/Pokedex/blob/main/Screenshots/NotFound.png" width="300">
 
 ---
 
